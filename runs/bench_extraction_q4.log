@@ -1,0 +1,9 @@
+eval tasks: 104
+  20 tasks done
+  40 tasks done
+  60 tasks done
+  80 tasks done
+  100 tasks done
+
+=== EXTRACTION BENCH (higher is better) ===
+zwell-combined: field-acc 96.4% | perfect 76/104 (73%) | parse-fail 0 | avg 1.0s/task

@@ -1,0 +1,45 @@
+  [PASS] A_faithfulness/qa1 
+  [PASS] A_faithfulness/qa2 
+  [PASS] A_faithfulness/qa3 
+  [PASS] A_faithfulness/qa4 
+  [PASS] B_trap/absent-service 
+  [FAIL] B_trap/no-cross-attribution 0. The digest reports 3 open positions for `paper-book`, but `lane-scan` only performed a scan
+  [PASS] B_trap/false-premise 
+  [PASS] C_enumeration/recall-4of4 
+  [PASS] C_enumeration/no-false-positives 
+  [FAIL] D_brief/max-14-lines 28 lines
+  [PASS] D_brief/all-bullets 
+  [PASS] D_brief/mentions-failures 
+  [FAIL] E_coding/parse_uptime  "/tmp/tmpm3wb33r1.py", line 21, in <module>
+    assert parse_uptime('3d 4h 12m')==3*86400+4*3600+12*60
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/tmpm3wb33r1.py", line 7, in parse_uptime
+    val = int(parts[i])
+          ^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '3d'
+
+  [PASS] E_coding/dedupe_events 
+  [FAIL] E_coding/next_cron_gap Traceback (most recent call last):
+  File "/tmp/tmpfkgvuipz.py", line 17, in <module>
+    assert max_idle_gap([60])==1440
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+  [PASS] F_reasoning/cron-collision 
+  [PASS] F_reasoning/memory-budget 
+  [PASS] F_reasoning/gpu-minutes 
+  [PASS] G_toolcall/alert-tool 
+
+=== zwell-v1-q8 (thinking=off) ===
+QUALITY SCORE: 78.9%  (15/19 objective checks)
+| Category | Passed | median gen t/s |
+|---|---|---:|
+| A_faithfulness | 4/4 | 55.7 |
+| B_trap | 2/3 | 57.4 |
+| C_enumeration | 2/2 | 53.1 |
+| D_brief | 2/3 | 53.0 |
+| E_coding | 1/3 | 53.1 |
+| F_reasoning | 3/3 | 52.3 |
+| G_toolcall | 1/1 | 51.4 |
+overall median gen t/s: 53.1
+wrote $HOME/models/dgx_bundle/miaai35-tune/results/v5-zwell-v1-q8-20260717-214434.json
