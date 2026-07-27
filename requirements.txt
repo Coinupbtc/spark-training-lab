@@ -1,0 +1,6 @@
+# Core lab scripts (train extras are optional — install when you train)
+datasets>=2.18
+transformers>=4.40
+peft>=0.11
+accelerate>=0.30
+torch  # install the wheel that matches your CUDA/platform

@@ -1,0 +1,33 @@
+  [PASS] A_faithfulness/qa1 
+  [PASS] A_faithfulness/qa2 
+  [PASS] A_faithfulness/qa3 
+  [PASS] A_faithfulness/qa4 
+  [PASS] B_trap/absent-service 
+  [PASS] B_trap/no-cross-attribution 
+  [PASS] B_trap/false-premise 
+  [PASS] C_enumeration/recall-4of4 
+  [PASS] C_enumeration/no-false-positives 
+  [PASS] D_brief/max-14-lines 
+  [PASS] D_brief/all-bullets 
+  [PASS] D_brief/mentions-failures 
+  [PASS] E_coding/parse_uptime 
+  [PASS] E_coding/dedupe_events 
+  [PASS] E_coding/next_cron_gap 
+  [PASS] F_reasoning/cron-collision 
+  [PASS] F_reasoning/memory-budget 
+  [PASS] F_reasoning/gpu-minutes 
+  [PASS] G_toolcall/alert-tool 
+
+=== zwell-combined-q8 (thinking=off) ===
+QUALITY SCORE: 100.0%  (19/19 objective checks)
+| Category | Passed | median gen t/s |
+|---|---|---:|
+| A_faithfulness | 4/4 | 60.4 |
+| B_trap | 3/3 | 48.4 |
+| C_enumeration | 2/2 | 47.5 |
+| D_brief | 3/3 | 47.2 |
+| E_coding | 3/3 | 47.6 |
+| F_reasoning | 3/3 | 48.2 |
+| G_toolcall | 1/1 | 47.9 |
+overall median gen t/s: 48.0
+wrote $HOME/models/dgx_bundle/miaai35-tune/results/v5-zwell-combined-q8-20260717-214926.json

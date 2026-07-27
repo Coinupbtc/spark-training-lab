@@ -1,0 +1,3 @@
+{"messages": [{"role": "user", "content": "Summarize this host status in 3 bullets: inference up, 35B on :8889, dual-node fabric linked."}, {"role": "assistant", "content": "- Agent gateways healthy\n- Default text model on localhost:8889\n- Dual Spark fabric linked"}]}
+{"messages": [{"role": "user", "content": "What is LoRA fine-tuning in one sentence?"}, {"role": "assistant", "content": "LoRA freezes the base model and trains small adapter matrices so you specialize behavior without rewriting all weights."}]}
+{"messages": [{"role": "user", "content": "Should I full-finetune DeepSeek-V4-Flash on two Sparks?"}, {"role": "assistant", "content": "No \u2014 serve it with the DSpark TP=2 recipe; use LoRA only on smaller models for personal data."}]}

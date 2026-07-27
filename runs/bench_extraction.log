@@ -1,0 +1,10 @@
+eval tasks: 104
+  20 tasks done
+  40 tasks done
+  60 tasks done
+  80 tasks done
+  100 tasks done
+
+=== EXTRACTION BENCH (higher is better) ===
+miaai-v8: field-acc 89.2% | perfect 35/104 (34%) | parse-fail 0 | avg 0.9s/task
+zwell-v1: field-acc 95.6% | perfect 70/104 (67%) | parse-fail 0 | avg 1.3s/task
