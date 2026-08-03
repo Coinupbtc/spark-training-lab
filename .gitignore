@@ -22,7 +22,8 @@ __pycache__/
 .vscode/
 *.swp
 
-# Transient train artifacts (keep runs/*.log; skip huge dumps)
+# Transient train artifacts — logs are machine output, never commit
+runs/*.log
 runs/**/checkpoint-*/
 runs/**/*.pt
 runs/**/*.bin
