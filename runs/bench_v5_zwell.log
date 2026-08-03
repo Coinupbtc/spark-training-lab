@@ -1,7 +1,0 @@
-  [PASS] A_faithfulness/qa1 
-  [PASS] A_faithfulness/qa2 
-  [PASS] A_faithfulness/qa3 
-  [PASS] A_faithfulness/qa4 
-  [PASS] B_trap/absent-service 
-  [FAIL] B_trap/no-cross-attribution 0. The digest reports 3 open positions for `paper-book`, but `lane-scan` only performed a scan
-  [PASS] B_trap/false-premise 
