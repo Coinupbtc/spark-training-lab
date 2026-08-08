@@ -27,3 +27,7 @@ runs/*.log
 runs/**/checkpoint-*/
 runs/**/*.pt
 runs/**/*.bin
+
+# LoRA adapter weights — regenerable from base + adapters via scripts, NEVER commit
+adapters/**/*.safetensors
+adapters/**/*.bin
