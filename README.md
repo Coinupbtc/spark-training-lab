@@ -4,7 +4,6 @@
 
 
 
-![Screenshot](docs/screenshots/hero.png)
 
 LoRA / QLoRA **lab for NVIDIA DGX Spark**: adapters, datasets, merge scripts, and run logs.
 
