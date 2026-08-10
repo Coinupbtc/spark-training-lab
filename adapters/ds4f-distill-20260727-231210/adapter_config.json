@@ -3,7 +3,7 @@
   "alpha_pattern": {},
   "arrow_config": null,
   "auto_mapping": null,
-  "base_model_name_or_path": "Qwen/Qwen3.6-35B-A3B",
+  "base_model_name_or_path": "/home/coinupbtc/Documents/projects/spark-training-lab/models/zwell-35b-combined-v1",
   "bias": "none",
   "corda_config": null,
   "ensure_weight_tying": false,
@@ -30,10 +30,10 @@
   "rank_pattern": {},
   "revision": null,
   "target_modules": [
-    "v_proj",
     "q_proj",
+    "o_proj",
     "k_proj",
-    "o_proj"
+    "v_proj"
   ],
   "target_parameters": null,
   "task_type": "CAUSAL_LM",

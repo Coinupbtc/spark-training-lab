@@ -15,10 +15,15 @@ from transformers import (AutoModelForCausalLM, AutoTokenizer, TrainingArguments
 from peft import LoraConfig, get_peft_model
 
 LAB = Path.home() / "Documents/projects/spark-training-lab"
-BASE = "Qwen/Qwen3.6-35B-A3B"
+# Local merged HF (preferred) or Hub id — continuous-distill sets BASE_MODEL explicitly
+BASE = os.environ.get("BASE_MODEL", "Qwen/Qwen3.6-35B-A3B")
 OUT = LAB / "adapters" / os.environ.get("ADAPTER_NAME", "student-extraction-v1")
-DATA = LAB / "datasets" / os.environ.get("DATA_FILE", "pilot_extraction.jsonl")
+# DATA_FILE may be absolute or relative to datasets/
+_data = os.environ.get("DATA_FILE", "pilot_extraction.jsonl")
+DATA = Path(_data) if _data.startswith("/") else (LAB / "datasets" / _data)
 RUN = os.environ.get("ADAPTER_NAME", "student-extraction-v1")
+MAX_LEN = int(os.environ.get("DISTILL_MAX_LEN", "512"))
+EPOCHS = float(os.environ.get("DISTILL_EPOCHS", "2"))
 
 print(f"loading base {BASE} in 4-bit…", flush=True)
 t0 = time.time()
@@ -41,16 +46,18 @@ rows = [json.loads(l) for l in open(DATA) if l.strip()]
 
 def fmt(r):
     text = tok.apply_chat_template(r["messages"], tokenize=False)
-    ids = tok(text, truncation=True, max_length=512)
+    ids = tok(text, truncation=True, max_length=MAX_LEN)
     ids["labels"] = ids["input_ids"].copy()
     return ids
 
-ds = Dataset.from_list(rows).map(fmt, remove_columns=["messages"]).train_test_split(test_size=0.1, seed=17)
+# Drop non-messages columns (id/run_id/teacher) so map stays clean
+_cols = list(rows[0].keys()) if rows else ["messages"]
+ds = Dataset.from_list(rows).map(fmt, remove_columns=_cols).train_test_split(test_size=0.1, seed=17)
 print(f"train {len(ds['train'])} eval {len(ds['test'])}", flush=True)
 
 args = TrainingArguments(
     output_dir=str(LAB / "runs" / RUN),
-    num_train_epochs=2, per_device_train_batch_size=2, gradient_accumulation_steps=8,
+    num_train_epochs=EPOCHS, per_device_train_batch_size=2, gradient_accumulation_steps=8,
     learning_rate=1e-4, lr_scheduler_type="cosine", warmup_ratio=0.05,
     logging_steps=5, bf16=True, report_to=[], save_strategy="no",
     eval_strategy="steps", eval_steps=30, per_device_eval_batch_size=2,

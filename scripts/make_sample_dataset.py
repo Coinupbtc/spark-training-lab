@@ -7,8 +7,8 @@ out = Path(__file__).resolve().parents[1] / "datasets" / "sample_train.jsonl"
 rows = [
     {
         "messages": [
-            {"role": "user", "content": "Summarize this host status in 3 bullets: inference up, 35B on :8889, dual-node fabric linked."},
-            {"role": "assistant", "content": "- Agent gateways healthy\n- Default text model on localhost:8889\n- Dual Spark fabric linked"},
+            {"role": "user", "content": "Summarize this host status in 3 bullets: Hermes up, 35B on :8889, CX7 cluster .10/.11."},
+            {"role": "assistant", "content": "- Hermes gateways healthy\n- Default text model on localhost:8889\n- Dual Spark fabric 192.168.100.10↔11"},
         ]
     },
     {

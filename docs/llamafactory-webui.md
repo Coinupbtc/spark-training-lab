@@ -1,10 +1,10 @@
 # LLaMA-Factory WebUI (LLaMA Board) — Spark 2
 
 ## Open
-- **LAN:** http://LAN_HOST:7860
+- **LAN:** http://192.168.50.167:7860
 - **On Spark2 desktop:** http://127.0.0.1:7860
 - **SSH tunnel from laptop:**  
-  `ssh -L 7860:127.0.0.1:7860 coinupbtc@LAN_HOST`  
+  `ssh -L 7860:127.0.0.1:7860 coinupbtc@192.168.50.167`  
   then open http://127.0.0.1:7860
 
 ## Service

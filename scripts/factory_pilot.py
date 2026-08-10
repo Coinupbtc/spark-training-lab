@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 """Phase-B pilot: distillation data factory, task type A (listing title -> JSON).
 
-Pipeline: real listing titles (set ARB_DATA) -> two teachers (two local OpenAI-compatible teachers) each extract structured JSON -> field-level agreement
+Pipeline: real pokemon-arb listing titles -> two teachers (MiMo-V2.5 node2 :8100,
+Qwen35B v8 node1 :8889) each extract structured JSON -> field-level agreement
 grading -> consensus winners written as training JSONL.
 
 Usage: factory_pilot.py [N_TASKS]   (default 20)
 Output: datasets/pilot_extraction.jsonl + a grading report on stdout.
 """
 import json, random, re, sys, time, urllib.request
-import os
 from pathlib import Path
 
 LAB = Path.home() / "Documents/projects/spark-training-lab"
-ARB = Path(os.environ.get("ARB_DATA", str(Path.home() / "data" / "listings")))
+ARB = Path.home() / "Documents/projects/pokemon-arb/data"
 N = 20 if not sys.argv[1:] or sys.argv[1] == "all" else int(sys.argv[1])
 
 TEACHERS = {
-    "mimo":   ("http://NODE2_HOST:8100/v1/chat/completions", "xiaomi/mimo-v2.5-pro", 800),
+    "mimo":   ("http://192.168.100.11:8100/v1/chat/completions", "xiaomi/mimo-v2.5-pro", 800),
     "qwen35": ("http://127.0.0.1:8889/v1/chat/completions", "qwen35b-miaai", 800),
 }
 

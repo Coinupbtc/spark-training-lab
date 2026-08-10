@@ -8,11 +8,10 @@ Type C — clean query: raw beezie title -> clean_query (their hand label is gol
 Output: datasets/v2_deterministic.jsonl
 """
 import json, random
-import os
 from pathlib import Path
 
 LAB = Path.home() / "Documents/projects/spark-training-lab"
-ARB = Path(os.environ.get("ARB_DATA", str(Path.home() / "data" / "listings")))
+ARB = Path.home() / "Documents/projects/pokemon-arb/data"
 out = []
 
 items = json.load(open(ARB / "courtyard_latest.json"))
