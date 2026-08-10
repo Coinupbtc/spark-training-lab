@@ -22,12 +22,8 @@ __pycache__/
 .vscode/
 *.swp
 
-# Transient train artifacts — logs are machine output, never commit
-runs/*.log
+# Transient train artifacts (keep runs/*.log; skip huge dumps)
 runs/**/checkpoint-*/
 runs/**/*.pt
 runs/**/*.bin
-
-# LoRA adapter weights — regenerable from base + adapters via scripts, NEVER commit
-adapters/**/*.safetensors
-adapters/**/*.bin
+node_modules/
