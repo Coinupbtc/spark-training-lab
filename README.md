@@ -1,5 +1,11 @@
 # Spark Training Lab
 
+![Screenshot](docs/screenshots/hero.png)
+
+
+
+![Screenshot](docs/screenshots/hero.png)
+
 LoRA / QLoRA **lab for NVIDIA DGX Spark**: adapters, datasets, merge scripts, and run logs.
 
 Multi-GB base weights and merged GGUFs are **not** in this repo (rebuild locally).

@@ -27,3 +27,4 @@ runs/**/checkpoint-*/
 runs/**/*.pt
 runs/**/*.bin
 node_modules/
+dogfood-output/
