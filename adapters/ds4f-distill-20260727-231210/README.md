@@ -1,9 +1,9 @@
 ---
-base_model: /home/coinupbtc/Documents/projects/spark-training-lab/models/zwell-35b-combined-v1
+base_model: models/zwell-35b-combined-v1
 library_name: peft
 pipeline_tag: text-generation
 tags:
-- base_model:adapter:/home/coinupbtc/Documents/projects/spark-training-lab/models/zwell-35b-combined-v1
+- base_model:adapter:models/zwell-35b-combined-v1
 - lora
 - transformers
 ---

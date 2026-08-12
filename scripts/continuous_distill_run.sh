@@ -12,7 +12,7 @@
 #   DISTILL_MODE=full  bash .../continuous_distill_run.sh
 set -euo pipefail
 
-HOME_DIR="${HOME:-/home/coinupbtc}"
+HOME_DIR="${HOME}"
 LAB="${HOME_DIR}/Documents/projects/spark-training-lab"
 SCRIPTS="${HOME_DIR}/.hermes/scripts"
 ALERT="${SCRIPTS}/alertbot-send.sh"
