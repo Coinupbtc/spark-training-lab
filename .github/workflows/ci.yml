@@ -1,0 +1,16 @@
+name: ci
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: setup.sh orients (no GPU)
+        run: |
+          bash -n setup.sh
+          ./setup.sh
+          test -d adapters
+          test -d datasets

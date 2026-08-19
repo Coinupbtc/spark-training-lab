@@ -2,6 +2,8 @@
 
 ![Screenshot](docs/screenshots/hero.png)
 
+![CI](https://github.com/Coinupbtc/spark-training-lab/actions/workflows/ci.yml/badge.svg)
+
 LoRA / QLoRA **lab for NVIDIA DGX Spark**: adapters, datasets, merge scripts, and run logs.
 
 Multi-GB base weights and merged GGUFs are **not** in this repo (rebuild locally).
