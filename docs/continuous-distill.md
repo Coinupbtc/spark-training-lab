@@ -26,7 +26,7 @@ While you’re asleep it: collect from Puzzle → pause Puzzle → QLoRA on spar
 
 First full run may rsync ~67G student base to spark2 (one-time). Deep lane is offline for the train window only.
 
-Outputs: `datasets/continuous/`, `adapters/distill-*`, `proposals/*.md`, state `~/.local/state/hermes/continuous-distill/latest.json`.
+Outputs (local host): `datasets/continuous/`, `adapters/distill-*`, `proposals/*.md`, state `~/.local/state/hermes/continuous-distill/latest.json`. Trained adapter weight files and run metrics stay local — they are **not** published in this git tree.
 
 ## Rules
 
