@@ -5,7 +5,8 @@ cd "$(dirname "$0")"
 
 echo "==> spark-training-lab"
 echo
-echo "This repo ships adapters, datasets, and scripts — not multi-GB base weights."
+# Configs + datasets + scripts only; trained LoRA files and metrics stay on the host.
+echo "This repo ships datasets, scripts, and adapter configs — not trained LoRA weights, run metrics, or multi-GB base models."
 echo
 echo "Quick look (no GPU):"
 echo "  ls adapters/"
