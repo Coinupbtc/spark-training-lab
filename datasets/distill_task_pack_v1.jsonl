@@ -19,6 +19,6 @@
 {"id": "agent-1", "messages": [{"role": "user", "content": "Deep lane (light Telegram) feels slow. List 3 discriminators: model reasoning tax vs gateway hang vs GPU contention. One line each."}]}
 {"id": "agent-2", "messages": [{"role": "user", "content": "Propose a propose-only distill loop: teacher Puzzle, student 35B LoRA, human approve before Hermes wire. 5 numbered steps."}]}
 {"id": "agent-3", "messages": [{"role": "user", "content": "Write a one-paragraph Telegram proposal message template with placeholders: RUN_ID, N_TRACES, EVAL_BEFORE, EVAL_AFTER, ADAPTER_PATH, APPROVE_CMD."}]}
-{"id": "style-1", "messages": [{"role": "user", "content": "Reply in Adam ops style: short, numbers over adjectives, one recommendation sentence. Topic: should we auto-promote LoRA into :8889?"}]}
+{"id": "style-1", "messages": [{"role": "user", "content": "Reply in operator ops style: short, numbers over adjectives, one recommendation sentence. Topic: should we auto-promote LoRA into :8889?"}]}
 {"id": "style-2", "messages": [{"role": "user", "content": "User asks 'is the stack healthy?'. Give a 4-line checklist using curl to :8889, :8100, hermes cron list, free -g."}]}
 {"id": "style-3", "messages": [{"role": "user", "content": "Explain heavy-job-admit.sh in one sentence and when a distill cron must call it."}]}

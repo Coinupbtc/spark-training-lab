@@ -19,14 +19,14 @@ systemctl --user stop llamafactory-webui
 ## Paths
 - Code: `~/Documents/projects/LLaMA-Factory`
 - Venv: `~/Documents/projects/factoryEnv`
-- Sample dataset: `adam_sample` (registered in data/dataset_info.json)
+- Sample dataset: `operator_sample` (registered in data/dataset_info.json)
 
 ## First train in the UI (click path)
 1. **Language** → en
 2. **Model name** → e.g. `Qwen/Qwen2.5-1.5B-Instruct` (small first) or `Qwen/Qwen2.5-7B-Instruct`
 3. **Finetuning method** → `lora`
-4. **Dataset** → `adam_sample` (or built-in `alpaca_en_demo` for a longer demo)
-5. **Output dir** → `saves/adam_test`
+4. **Dataset** → `operator_sample` (or built-in `alpaca_en_demo` for a longer demo)
+5. **Output dir** → `saves/operator_test`
 6. **Train** tab → **Start**
 
 Keep batch size small (1–2). Do not train while DSpark TP=2 is loaded.

@@ -1,7 +1,7 @@
 # First LoRA plan
 
 ## Goal
-Teach a mid-size model one measurable skill (example: answer in Adam's short ops style, or format tool calls).
+Teach a mid-size model one measurable skill (example: answer in the operator's short ops style, or format tool calls).
 
 ## Data schema (JSONL)
 ```json
